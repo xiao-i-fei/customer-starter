@@ -1,6 +1,5 @@
 package com.xiaofeio.api.autoconfigure.properties;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -12,7 +11,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @Email: 1903078434@qq.com
  * @Version: 1.0
  */
-@Data
 @ConfigurationProperties("api.info")
 public class ApiProperties {
 
@@ -24,4 +22,28 @@ public class ApiProperties {
      * 网关地址
      */
     private String gatewayUrl;
+
+    public String getAccessKey() {
+        return accessKey;
+    }
+
+    public void setAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+    }
+
+    public String getSecretKey() {
+        return secretKey;
+    }
+
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
+
+    public String getGatewayUrl() {
+        return gatewayUrl;
+    }
+
+    public void setGatewayUrl(String gatewayUrl) {
+        this.gatewayUrl = gatewayUrl;
+    }
 }
